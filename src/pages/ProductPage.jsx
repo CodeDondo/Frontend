@@ -1,4 +1,5 @@
 import { ContentWrapper } from "../components/ContentWrapper/ContentWrapper"
+import { Outlet } from 'react-router-dom'
 
 export const ProductPage = () => {
     return (
@@ -7,7 +8,7 @@ export const ProductPage = () => {
             description="Se vores produkter"
             subtitle="">
                 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, autem est dicta vero eum minima suscipit asperiores, molestias, dolore iure inventore in error earum atque impedit doloremque ad sint libero.</p>
+            <Outlet />
         </ContentWrapper>
     )
 }
