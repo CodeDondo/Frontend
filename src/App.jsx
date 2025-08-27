@@ -3,7 +3,7 @@ import { MainLayout } from "./layouts/MainLayout"
 import { HomePage } from "./pages/HomePage"
 import { ProductPage } from "./pages/ProductPage"
 import { LoginPage } from "./pages/LoginPage"
-import { ItemList } from './components/ItemList/ItemList'
+import { ItemListSort } from './components/ItemListSort/ItemListSort'
 import { ItemDetails } from "./components/ItemDetails/ItemDetails"
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
           <Route path="/products" element={<ProductPage />}>
-            <Route index element={<ItemList />}></Route>
+            <Route index element={<ItemListSort />}></Route>
             <Route path=":slug" element={<ItemDetails />}></Route>
           </Route>
           <Route path="/login" element={<LoginPage />} />

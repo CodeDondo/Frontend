@@ -1,5 +1,4 @@
 import { useItemDetails } from '../../hooks/useItemDetails'
-import { Link } from 'react-router-dom'
 
 export const ItemDetails = () => {
     const { itemDetails, loading, error } = useItemDetails()
@@ -9,9 +8,11 @@ export const ItemDetails = () => {
     if (loading) return <div>loading...</div>
     if (error) return <div>{error}</div>
     return (
-        <div>
+        <div key={id}>
             <h2>{title}</h2>
-            {description}
+            <p>{description}</p>
+            <p>{price} DKK</p>
+            <img src={`${import.meta.env.VITE_IMAGE_URL}${imageUrl}`} alt="" />
         </div>
     )
 }

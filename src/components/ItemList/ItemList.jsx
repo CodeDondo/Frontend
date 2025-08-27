@@ -13,7 +13,7 @@ export const ItemList = () => {
                 return (
                     <li key={id}>
                         <Link to={`${slug}`}>{title}</Link>
-
+                        
                     </li>
                 )
             })}
